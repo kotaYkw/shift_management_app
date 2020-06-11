@@ -60,5 +60,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
+  host = '<hex string>.vfs.cloud9.us-east-2.amazonaws.com'     # クラウドIDE
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  
   config.hosts << "76233de79a114eb9b6497255888fa037.vfs.cloud9.us-east-2.amazonaws.com"
 end
